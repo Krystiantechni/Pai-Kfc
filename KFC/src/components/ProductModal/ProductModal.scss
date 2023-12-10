@@ -1,0 +1,146 @@
+.product-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  nav {
+    position: sticky;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px;
+    background-color: #fff;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    .close-button,
+    .favourite {
+      font-size: 20px;
+      background-color: #fff;
+      cursor: pointer;
+
+      & > :hover {
+        color: red;
+      }
+    }
+  }
+
+  .product-wrapper {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 80%;
+    max-width: 640px;
+    background-color: #fff;
+    overflow: scroll;
+  }
+
+  .product-info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      margin-bottom: 24px;
+    }
+
+    .product-header {
+      display: flex;
+      flex-direction: row;
+      font-weight: bolder;
+      margin-bottom: 20px;
+      gap: 200px;
+    }
+
+    .product-description {
+      font-weight: lighter;
+      padding-bottom: 20px;
+    }
+  }
+
+  .purchase {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background-color: #f7f6f6;
+
+    strong {
+      color: #8ea604;
+    }
+
+    .add-to-basket {
+      position: sticky;
+      bottom: 0;
+      color: #fff;
+      font-weight: bold;
+      background-color: #9dad46;
+      height: 5vh;
+      width: 20vw;
+      text-transform: uppercase;
+      border-radius: 100px;
+      cursor: pointer;
+      margin: 20px;
+    }
+
+    .product-subfields-quantity-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 4px;
+
+      .product-subfields-quantity-add,
+      .product-subfields-quantity-remove {
+        border-radius: 10px;
+        justify-content: space-between;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+
+      .product-subfields-quantity-add {
+        background: #f4f6e6;
+        color: #8ea604;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .product-subfields-quantity-remove {
+        color: #8ea604;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 100px;
+  }
+}
